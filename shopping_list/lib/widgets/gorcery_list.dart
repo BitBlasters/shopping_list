@@ -44,6 +44,10 @@ class _GroceryListState extends State<GroceryList> {
       content = ListView.builder(
         itemCount: _groceryItems.length,
         itemBuilder: (ctx, index) => Dismissible(
+          background: Container(
+            color: Colors.red,
+            child: const Text('Delete'),
+          ),
           onDismissed: (direction) {
             _removeItem(_groceryItems[index]);
           },
